@@ -31,5 +31,12 @@ body {
   width: 80%;
   height: 30px;
   margin: 10px 0;
-  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px 0 rgba(0,0,0,0.5), -5px -5px 8px 0 rgba(255,255,255,0.5);
+}
+
+.result {
+  width: 0;
+  height: 100%;
+  background: lightblue;
 }
