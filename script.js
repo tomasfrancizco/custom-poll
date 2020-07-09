@@ -9,26 +9,22 @@ const resultB = document.getElementById("result-b");
 const resultC = document.getElementById("result-c");
 const resultD = document.getElementById("result-d");
 
+// console.log(Date.now())
+let options = [0, 0, 0, 0];
+
 button.onclick = () => {
   if(optionA.checked){
-    resultA.style.width = "100%";
-    resultB.style.width = "0";
-    resultC.style.width = "0";
-    resultD.style.width = "0";
+    options[0]++
   } else if(optionB.checked){
-    resultA.style.width = "0";
-    resultB.style.width = "100%";
-    resultC.style.width = "0";
-    resultD.style.width = "0";
+    options[1]++
   } else if(optionC.checked){
-    resultA.style.width = "0";
-    resultB.style.width = "0";
-    resultC.style.width = "100%";
-    resultD.style.width = "0";
+    options[2]++
   } else if(optionD.checked){
-    resultA.style.width = "0";
-    resultB.style.width = "0";
-    resultC.style.width = "0";
-    resultD.style.width = "100%";
+    options[3]++
   }
+  const total = options.reduce((acc, val) => acc+val);
+  resultA.style.width = `${options[0] * 100 / total}%`;
+  resultB.style.width = `${options[1] * 100 / total}%`;
+  resultC.style.width = `${options[2] * 100 / total}%`;
+  resultD.style.width = `${options[3] * 100 / total}%`;
 }
