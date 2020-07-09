@@ -4,7 +4,7 @@ const optionB = document.getElementById("option-b");
 const optionC = document.getElementById("option-c");
 const optionD = document.getElementById("option-d");
 const submitButton = document.getElementById("submit-btn");
-const nightButton = document.getElementsByClassName("night-mode-btn");
+const nightButton = document.getElementById("night-mode-btn");
 
 const resultA = document.getElementById("result-a");
 const resultB = document.getElementById("result-b");
@@ -39,10 +39,11 @@ submitButton.onclick = () => {
   voters.innerHTML = `${options.reduce((acc,val)=>acc+val)}`
 }
 
-const nightMode = () => {
+nightButton.onclick = () => {
   if(body.style.background == "lightblue"){
     body.style.background = "darkslategray"
     body.style.color = "white"
+
   } else {  
     body.style.background = "lightblue"
   }
