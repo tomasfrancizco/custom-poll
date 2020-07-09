@@ -8,6 +8,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: lightblue;
+  font-family: Helvetica, sans-serif;
+}
+
+.shadow {
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.5),
+    -5px -5px 8px 0 rgba(255, 255, 255, 0.5);
 }
 
 .main-container {
@@ -17,6 +24,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
+}
+
+#submit-btn {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#submit-btn:active {
+  box-shadow: 2px 2px 5px 0 rgba(255, 255, 255, 0.5) inset,
+    -2px -2px 5px 0 rgba(0, 0, 0, 0.5) inset;
 }
 
 .results-main-container {
@@ -32,11 +50,16 @@ body {
   height: 30px;
   margin: 10px 0;
   border-radius: 5px;
-  box-shadow: 5px 5px 8px 0 rgba(0,0,0,0.5), -5px -5px 8px 0 rgba(255,255,255,0.5);
+  overflow: hidden;
 }
 
 .result {
   width: 0;
   height: 100%;
-  background: lightblue;
+  background: lightcoral;
+  padding: 6px 0 0 5px;
+}
+
+#voters-cont {
+  margin: 10px 0;
 }

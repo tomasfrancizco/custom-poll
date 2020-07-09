@@ -7,7 +7,7 @@
     <title>Custom Poll</title>
   </head>
   <body>
-    <div class="main-container">
+    <div class="main-container shadow">
       <div class="options-main-container">
         <div class="option-container">
           <input type="radio" name="option" id="option-a" />
@@ -27,24 +27,29 @@
           <input type="radio" name="option" id="option-d" />
           <label for="option-d">Option D</label>
         </div>
-        <button type="button" id="submit-btn">Submit</button>
+        <button type="button" id="submit-btn" class="shadow">Submit</button>
       </div>
 
       <div class="results-main-container">
-        <div class="result-container">
+        <div class="result-container shadow" id="result-a-cont">
           <div class="result" id="result-a"></div>
         </div>
-        <div class="result-container">
+        <div class="result-container shadow" id="result-b-cont">
           <div class="result" id="result-b"></div>
         </div>
-        <div class="result-container">
+        <div class="result-container shadow" id="result-c-cont">
           <div class="result" id="result-c"></div>
         </div>
-        <div class="result-container">
+        <div class="result-container shadow" id="result-d-cont">
           <div class="result" id="result-d"></div>
         </div>
       </div>
+      <div>
+        <p id="voters-cont">Voters: <span id="voters">0</span></p>
+      </div>
     </div>
+    
+
 
     <script src="script.js"></script>
   </body>
