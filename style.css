@@ -8,8 +8,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background: lightblue;
   font-family: Helvetica, sans-serif;
+}
+
+#night-mode {
+  margin: 20px 0;
+}
+
+#night-mode button {
+  width: 120px;
+  height: 30px;
 }
 
 .shadow {
