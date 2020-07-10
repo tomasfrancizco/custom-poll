@@ -6,6 +6,7 @@ const optionD = document.getElementById("option-d");
 const submitButton = document.getElementById("submit-btn");
 const nightButtonCont = document.getElementById("night-mode-btn-cont");
 const nightButton = document.getElementById("night-mode-btn")
+const resultContainers = document.getElementsByClassName("result-container");
 
 const resultA = document.getElementById("result-a");
 const resultB = document.getElementById("result-b");
@@ -42,7 +43,10 @@ submitButton.onclick = () => {
 
 nightButtonCont.onclick = () => {
   if(body.style.background == "lightblue"){
-    body.style.background = "darkslategray"
+    body.style.background = "#1d1d20"
+    for(let i=0;i<resultContainers.length;i++){
+      resultContainers[i].style.background = "#343536"
+    }
     body.style.color = "white"
     nightButton.style.left = "50px";
     nightButton.classList.add("horizontal-translate")
@@ -50,6 +54,9 @@ nightButtonCont.onclick = () => {
 
   } else {  
     body.style.background = "lightblue"
+    for(let i=0;i<resultContainers.length;i++){
+      resultContainers[i].style.background = "0"
+    }
     nightButton.style.left = "0"
     nightButtonCont.style.background = "red"
     body.style.color = "black"
