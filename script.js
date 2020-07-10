@@ -4,7 +4,8 @@ const optionB = document.getElementById("option-b");
 const optionC = document.getElementById("option-c");
 const optionD = document.getElementById("option-d");
 const submitButton = document.getElementById("submit-btn");
-const nightButton = document.getElementById("night-mode-btn");
+const nightButtonCont = document.getElementById("night-mode-btn-cont");
+const nightButton = document.getElementById("night-mode-btn")
 
 const resultA = document.getElementById("result-a");
 const resultB = document.getElementById("result-b");
@@ -39,12 +40,18 @@ submitButton.onclick = () => {
   voters.innerHTML = `${options.reduce((acc,val)=>acc+val)}`
 }
 
-nightButton.onclick = () => {
+nightButtonCont.onclick = () => {
   if(body.style.background == "lightblue"){
     body.style.background = "darkslategray"
     body.style.color = "white"
+    nightButton.style.left = "50px";
+    nightButton.classList.add("horizontal-translate")
+    nightButtonCont.style.background = "green"
 
   } else {  
     body.style.background = "lightblue"
+    nightButton.style.left = "0"
+    nightButtonCont.style.background = "red"
+    body.style.color = "black"
   }
 }

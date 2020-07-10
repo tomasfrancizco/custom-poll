@@ -14,12 +14,31 @@ body {
 }
 
 #night-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 20px 0;
 }
 
-#night-mode button {
-  width: 120px;
+#night-mode-btn-cont {
+  position: relative;
+  width: 100px;
   height: 30px;
+  margin: 10px 0;
+  border-radius: 50px;
+  background: red;
+  border: 1px solid gray;
+}
+
+#night-mode-btn {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  border-radius: 50px;
+  background: lightgray;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5) inset,
+    -1px -1px 3px 0 rgba(255, 255, 255, 0.5) inset;
 }
 
 .shadow {
@@ -39,12 +58,24 @@ body {
 
 #submit-btn {
   width: 100%;
+  height: 20px;
   margin: 10px 0;
+  border-radius: 5px;
+  border: 0;
 }
 
 #submit-btn:active {
   box-shadow: 2px 2px 5px 0 rgba(255, 255, 255, 0.5) inset,
     -2px -2px 5px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+#submit-btn:focus {
+  outline: 0;
+}
+
+.horizontal-translate {
+  transition: .2s;
+  left: 50px;
 }
 
 .results-main-container {
